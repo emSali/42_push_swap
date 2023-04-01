@@ -1,29 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   check_args.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: esali <esali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/26 19:43:11 by esali             #+#    #+#             */
-/*   Updated: 2023/04/01 18:21:27 by esali            ###   ########.fr       */
+/*   Created: 2023/04/01 18:20:42 by esali             #+#    #+#             */
+/*   Updated: 2023/04/01 18:21:24 by esali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-
-int	main(int argc, char *argv[])
+int check_args()
 {
-	if (argc < 2)
-	{
-		ft_printf("\n%s", argv[0]);
-		return (0);
-	}
-	if (check_args())
-	{
-		ft_printf("Error\n");
-		return (1);
-	}
 	return (1);
 }
