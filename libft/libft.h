@@ -6,7 +6,7 @@
 /*   By: esali <esali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 13:54:11 by esali             #+#    #+#             */
-/*   Updated: 2022/06/11 21:50:31 by esali            ###   ########.fr       */
+/*   Updated: 2023/04/07 16:03:28 by esali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 
 typedef struct s_list
 {
-	void			*content;
+	int				content;
 	struct s_list	*next;
 }					t_list;
 
@@ -60,7 +60,7 @@ void		ft_putchar_fd(char c, int fd);
 void		ft_putstr_fd(char *s, int fd);
 void		ft_putendl_fd(char *s, int fd);
 void		ft_putnbr_fd(int n, int fd);
-t_list		*ft_lstnew(void *content);
+t_list		*ft_lstnew(int content);
 void		ft_lstadd_front(t_list **lst, t_list *new);
 int			ft_lstsize(t_list *lst);
 t_list		*ft_lstlast(t_list *lst);

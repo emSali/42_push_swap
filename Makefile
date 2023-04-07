@@ -6,7 +6,7 @@
 #    By: esali <esali@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/26 19:33:54 by esali             #+#    #+#              #
-#    Updated: 2023/04/01 18:29:55 by esali            ###   ########.fr        #
+#    Updated: 2023/04/07 15:58:03 by esali            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,10 +28,10 @@ LIBFT_DIR = libft/
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(MAKE) -C $(LIBFT_DIR)
+	$(MAKE) bonus -C $(LIBFT_DIR)
 	gcc $(FLAGS) -c $(SRCS)
 	mv *.o srcs
-	gcc $(CFLAGS) $(OBJS) -fsanitize=address $(LIBFT_A) -o $(NAME)
+	gcc $(CFLAGS) $(OBJS) -fsanitize=address -g $(LIBFT_A) -o $(NAME)
 
 $(OBJS): $(SRCS)
 	gcc $(FLAGS) -c $(SRCS)
