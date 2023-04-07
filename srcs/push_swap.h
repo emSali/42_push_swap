@@ -6,7 +6,7 @@
 /*   By: esali <esali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 15:38:36 by esali             #+#    #+#             */
-/*   Updated: 2023/04/07 11:27:19 by esali            ###   ########.fr       */
+/*   Updated: 2023/04/07 18:43:52 by esali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include "../libft/libft.h"
 
-int check_args();
+void	free_list(t_list *list);
+t_list	*init_check_list(int argc, char *argv[]);
+void	short_sort(t_list *a, t_list *b);
 
 #endif
