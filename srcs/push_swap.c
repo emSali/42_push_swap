@@ -6,7 +6,7 @@
 /*   By: esali <esali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/26 19:43:11 by esali             #+#    #+#             */
-/*   Updated: 2023/04/07 16:11:05 by esali            ###   ########.fr       */
+/*   Updated: 2023/04/07 17:48:16 by esali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,11 @@ void free_list(t_list *list)
 		return ;
 	free(list);
 	free(list->next);
+}
+
+int	check_dups()
+{
+	return 1;
 }
 
 int	main(int argc, char *argv[])
@@ -34,10 +39,11 @@ int	main(int argc, char *argv[])
 	i = 1;
 	while (i < argc)
 	{
-		nr = ft_atoi(argv[i]);
+		nr = ft_atoi(argv[i]); //checks for int out of scope and other chars than digits
 		if (ft_strncmp("-1", argv[i], 2) != 0 && nr == -1) // use ft_strcmp to com[are strings
 		{
 			ft_printf("Error\n");
+			free_list(a);
 			return (0);
 		}
 		if (i == 1)
@@ -46,6 +52,11 @@ int	main(int argc, char *argv[])
 			ft_lstadd_back(&a, ft_lstnew(nr));
 		ft_printf("\nargv[%i]: %s", i, argv[i]); //remove
 		i++;
+	}
+	if (check_dups())
+	{
+		free_list(a);
+		return (0);
 	}
 	free_list(a);
 	return (1);
