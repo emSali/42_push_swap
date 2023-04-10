@@ -6,7 +6,7 @@
 /*   By: esali <esali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 15:38:36 by esali             #+#    #+#             */
-/*   Updated: 2023/04/07 18:43:52 by esali            ###   ########.fr       */
+/*   Updated: 2023/04/10 16:24:28 by esali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,9 @@
 
 void	free_list(t_list *list);
 t_list	*init_check_list(int argc, char *argv[]);
-void	short_sort(t_list *a, t_list *b);
+void	short_sort(int len, t_list *a, char *ab);
+void	s(t_list *list, char *ab);
+void	print_list(t_list *list);
+
 
 #endif

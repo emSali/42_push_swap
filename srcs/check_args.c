@@ -6,7 +6,7 @@
 /*   By: esali <esali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 18:20:42 by esali             #+#    #+#             */
-/*   Updated: 2023/04/07 18:43:53 by esali            ###   ########.fr       */
+/*   Updated: 2023/04/10 16:31:39 by esali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,11 @@ t_list	*init_check_list(int argc, char *argv[])
 			ft_lstadd_back(&a, ft_lstnew(nr));
 		i++;
 	}
-	print_list(a);
+	//print_list(a);
 	return (a);
 }
+
+// int	is_sorted(t_list a)
+// {
+
+// }

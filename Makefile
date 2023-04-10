@@ -6,13 +6,13 @@
 #    By: esali <esali@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/26 19:33:54 by esali             #+#    #+#              #
-#    Updated: 2023/04/07 18:38:06 by esali            ###   ########.fr        #
+#    Updated: 2023/04/10 15:40:12 by esali            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 
-SRCS = srcs/push_swap.c srcs/check_args.c srcs/short_sort.c
+SRCS = srcs/push_swap.c srcs/check_args.c srcs/short_sort.c srcs/operations.c
 
 OBJS = ${SRCS:.c=.o}
 

@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   short_sort.c                                       :+:      :+:    :+:   */
+/*   operations.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: esali <esali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/07 18:38:11 by esali             #+#    #+#             */
-/*   Updated: 2023/04/10 16:39:51 by esali            ###   ########.fr       */
+/*   Created: 2023/04/10 15:04:22 by esali             #+#    #+#             */
+/*   Updated: 2023/04/10 16:39:11 by esali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	short_stack_sort(t_list *a, char *ab)
+//sa & sb: swaps first two list elements
+void	s(t_list *list, char *ab)
 {
-	if (((a->next->next->content) > (a->content)) && ((a->content) > (a->next->content))) {
-		s(a, ab);
-	}
-}
+	t_list *first;
+    t_list *second;
+    t_list *third;
 
-void	short_sort(int len, t_list *a, char *ab)
-{
-	if (len == 3)
-		short_stack_sort(a, ab);
+	first = list;
+	second = first->next;
+	third = second->next;
+    second->next = first;
+    first->next = third;
+    list = second;
+	ft_printf("\n%s", ab);
 }
