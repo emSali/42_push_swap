@@ -6,16 +6,15 @@
 /*   By: esali <esali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 15:06:09 by esali             #+#    #+#             */
-/*   Updated: 2023/04/23 11:04:23 by esali            ###   ########.fr       */
+/*   Updated: 2023/04/23 18:06:08 by esali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-char *fill(int i)
+void	fill(int i)
 {
 	int		count;
-	char	*str;
 
 	count = 0;
 	if (i < 0)
@@ -26,13 +25,8 @@ char *fill(int i)
 		count++;
 	}
 	count = 11 - count;
-	str = "";
-	while(count)
-	{
-		str = ft_strjoin(str, " ");
-		count--;
-	}
-	return (str);
+	while(count--)
+		ft_printf(" ");
 }
 
 void	print_list(t_list *a, t_list *b)
@@ -43,12 +37,12 @@ void	print_list(t_list *a, t_list *b)
 	{
 		ft_printf("\n");
 		if (a != NULL) {
-			ft_printf("%i          ", a->content);
+			ft_printf("%i    ", a->content);
 			fill(a->content);
 			a = a->next;
 		}
 		else
-			ft_printf("                     ");
+			ft_printf("               ");
 		if (b != NULL)
 		{
 			ft_printf("%i", b->content);
