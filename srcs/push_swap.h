@@ -6,7 +6,7 @@
 /*   By: esali <esali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 15:38:36 by esali             #+#    #+#             */
-/*   Updated: 2023/04/23 17:40:38 by esali            ###   ########.fr       */
+/*   Updated: 2023/04/23 21:38:36 by esali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void	s(t_list *list, t_list *other, char ab);
 void	r(t_list *list, t_list *other, char ab);
 void	rr(t_list *list, t_list *other, char ab);
 void	p(t_list **a, t_list **b, char ab);
+void	sort(t_list *list, int len);
 void	print_list(t_list *a, t_list *b);
 
 

@@ -1,45 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   radix_sort.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: esali <esali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/26 19:43:11 by esali             #+#    #+#             */
-/*   Updated: 2023/04/23 21:39:53 by esali            ###   ########.fr       */
+/*   Created: 2023/04/23 21:22:27 by esali             #+#    #+#             */
+/*   Updated: 2023/04/23 21:44:23 by esali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-//just for debugging
-
-
-void free_list(t_list *list)
+void	give_index(t_list *list, int len)
 {
-	if (list == NULL)
-		return ;
-	free_list(list->next);
-	free(list);
-}
+	/*
+	IDEE:
+	1. create array with len argv and save each element in the right order inside it
+	2. go through each element in list and look at which index it is in sorted list and give it new value
 
-int	main(int argc, char *argv[])
+	*/
+
+void	sort(t_list *a, int len)
 {
-	t_list	*a;
-
-	if (argc == 1)
-		return (0);
-	a = init_check_list(argc, argv);
-	if (a == NULL)
-		return (0);
-	if (argc == 2)
-		return (0);
-	else if (argc <= 6) // max 5 elements
-		short_sort(argc - 1, &a);
-	else
-		sort(a, argc - 1);
-	free_list(a);
-	return (1);
+	give_index(a, len);
 }
-
-

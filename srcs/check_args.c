@@ -6,12 +6,22 @@
 /*   By: esali <esali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 18:20:42 by esali             #+#    #+#             */
-/*   Updated: 2023/04/23 11:04:23 by esali            ###   ########.fr       */
+/*   Updated: 2023/04/23 21:20:51 by esali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+int	is_sorted(t_list *list)
+{
+	while (list->next)
+	{
+		if (list->content > list->next->content)
+			return (0);
+		list = list->next;
+	}
+	return (1);
+}
 
 // returns 1 if has dup
 int	check_dups(t_list *list, int i)
@@ -49,11 +59,10 @@ t_list	*init_check_list(int argc, char *argv[])
 			ft_lstadd_back(&a, ft_lstnew(nr));
 		i++;
 	}
-	//print_list(a);
+	if (is_sorted(a))
+	{
+		free_list(a);
+		return (NULL);
+	}
 	return (a);
 }
-
-// int	is_sorted(t_list a)
-// {
-
-// }

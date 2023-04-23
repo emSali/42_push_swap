@@ -6,7 +6,7 @@
 /*   By: esali <esali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 18:38:11 by esali             #+#    #+#             */
-/*   Updated: 2023/04/23 18:30:56 by esali            ###   ########.fr       */
+/*   Updated: 2023/04/23 21:26:23 by esali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,6 @@ void	short_sort(int len, t_list **list)
 		if (len == 5)
 			put_in_stack(&b, list, 'a');
 	}
-
 	ft_printf("\n\nAfter sorting:");
 	print_list(*list, b);
 }
