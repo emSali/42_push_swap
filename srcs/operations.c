@@ -6,30 +6,26 @@
 /*   By: esali <esali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/10 15:04:22 by esali             #+#    #+#             */
-/*   Updated: 2023/05/19 18:29:23 by esali            ###   ########.fr       */
+/*   Updated: 2023/05/19 18:49:06 by esali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 //sa & sb: swaps first two list elements
-void	s(t_list *list, t_list *other, char ab)
+void	s(t_list *list, char ab)
 {
 	int save;
 
 	save = list->content;
 	list->content = list->next->content;
 	list->next->content = save;
-	ft_printf("\n%c", 's');
-	write(1, &ab, 1);
-	if (ab == 'b')
-		print_list(other, list);
-	else
-		print_list(list, other);
+	ft_printf("s%c\n", ab);
+	//write(1, &ab, 1);
 }
 
 // first element becomes last
-void	r(t_list *list, t_list *other, char ab)
+void	r(t_list *list, char ab)
 {
 	int		save_first;
 	t_list	*tmp;
@@ -43,17 +39,12 @@ void	r(t_list *list, t_list *other, char ab)
 	}
 	list->content = save_first;
 	list = tmp;
-	ft_printf("\n%c", 'r');
-	write(1, &ab, 1);
-	if (ab == 'b')
-		print_list(other, list);
-	else
-		print_list(list, other);
-
+	ft_printf("r%c\n", ab);
+	// write(1, &ab, 1);
 }
 
 // last Element becomes first
-void rr(t_list *list, t_list *other, char ab)
+void rr(t_list *list, char ab)
 {
 	int		save1;
 	int		save2;
@@ -71,12 +62,8 @@ void rr(t_list *list, t_list *other, char ab)
 		list = list->next;
 	}
 	list = tmp;
-	ft_printf("\n%s", "rr");
-	write(1, &ab, 1);
-	if (ab == 'b')
-		print_list(other, list);
-	else
-		print_list(list, other);
+	ft_printf("rr%c\n", ab);
+	// write(1, &ab, 1);
 }
 
 void p(t_list **from, t_list **into, char ab)
@@ -89,11 +76,6 @@ void p(t_list **from, t_list **into, char ab)
 	tmp = (*from)->next;
 	free(*from);
 	*from = tmp;
-	ft_printf("\n%s", "p");
-	write(1, &ab, 1);
-
-	if (ab == 'b')
-		print_list(*from, *into);
-	else
-		print_list(*into, *from);
+	ft_printf("p%c\n", ab);
+	//write(1, &ab, 1);
 }

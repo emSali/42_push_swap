@@ -6,7 +6,7 @@
 /*   By: esali <esali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/23 21:22:27 by esali             #+#    #+#             */
-/*   Updated: 2023/05/19 18:29:37 by esali            ###   ########.fr       */
+/*   Updated: 2023/05/19 18:50:31 by esali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ void	sort(t_list **a, int len)
 	give_index(*a, len);
 	b = NULL;
 	i = 0;
-	print_list(*a, b);
+	//print_list(*a, b);
 	while (i < get_bit_size(len))
 	{
 		len = ft_lstsize(*a) - 1;
@@ -92,7 +92,7 @@ void	sort(t_list **a, int len)
 		{
 			num = (*a)->content;
 			if (((num >> i) & 1) == 1)
-				r(*a, b, 'a');
+				r(*a, 'a');
 			else
 				p(a, &b, 'b');
 			j++;
@@ -102,7 +102,7 @@ void	sort(t_list **a, int len)
 		i++;
 		if (is_sorted(*a))
 		{
-			ft_printf("\n---------- IS SORTED --------------\n");
+			//ft_printf("\n---------- IS SORTED --------------\n");
 			return ;
 		}
 
