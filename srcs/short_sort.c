@@ -6,7 +6,7 @@
 /*   By: esali <esali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 18:38:11 by esali             #+#    #+#             */
-/*   Updated: 2023/04/23 21:26:23 by esali            ###   ########.fr       */
+/*   Updated: 2023/05/19 18:31:53 by esali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	sort3(t_list *a, t_list *b, char ab)
 	}
 }
 
-// Function puts a number on the correct spot in a sorted list of numbers
+// Function puts a number on the correct spot in a sorted stack of numbers
 void	put_in_stack(t_list **from, t_list **into, char ab)
 {
 	int		len;

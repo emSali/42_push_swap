@@ -6,14 +6,11 @@
 /*   By: esali <esali@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/26 19:43:11 by esali             #+#    #+#             */
-/*   Updated: 2023/04/23 21:39:53 by esali            ###   ########.fr       */
+/*   Updated: 2023/05/19 18:29:19 by esali            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-//just for debugging
-
 
 void free_list(t_list *list)
 {
@@ -37,7 +34,7 @@ int	main(int argc, char *argv[])
 	else if (argc <= 6) // max 5 elements
 		short_sort(argc - 1, &a);
 	else
-		sort(a, argc - 1);
+		sort(&a, argc - 1);
 	free_list(a);
 	return (1);
 }

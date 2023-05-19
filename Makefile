@@ -6,7 +6,7 @@
 #    By: esali <esali@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/26 19:33:54 by esali             #+#    #+#              #
-#    Updated: 2023/04/23 21:38:30 by esali            ###   ########.fr        #
+#    Updated: 2023/05/19 17:40:08 by esali            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ SRCS =	srcs/push_swap.c srcs/check_args.c srcs/short_sort.c srcs/operations.c sr
 
 OBJS = ${SRCS:.c=.o}
 
-CFLAGS = -Wall -Wextra -Werror -I.
+CFLAGS = -Wall -Wextra -I.
 
 LIBFT_A = libft/libft.a
 LIBFT_DIR = libft/
